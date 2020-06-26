@@ -5,9 +5,7 @@ def run():
         pattern = re.compile(r'[a-z]+')
         message = f.read()
         message_decoded = pattern.findall(message)
-    m = ''
-    for letter in message_decoded:
-        m += letter
+    m = ''.join(message_decoded)
     print(m)
 
 
