@@ -1,8 +1,14 @@
-# Resolve the problem!!
-
+import re
 
 def run():
-    # Start coding here
+    with open('encoded.txt', 'r', encoding='utf-8') as f:
+        pattern = re.compile(r'[a-z]+')
+        message = f.read()
+        message_decoded = pattern.findall(message)
+    m = ''
+    for letter in message_decoded:
+        m += letter
+    print(m)
 
 
 if __name__ == '__main__':
